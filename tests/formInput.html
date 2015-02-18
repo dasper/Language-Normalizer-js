@@ -1,0 +1,20 @@
+<html>
+<pre id='test1'>
+How can I replace diacritics (ă,ş,ţ etc) with their "normal" form (a,s,t) in javascript?
+</pre>
+
+<form name="myForm" action="" method="get">
+    Test: <input type="text" name="test">
+    <button onclick="return validateForm()" type="submit" value="Submit">Test</button>
+</form>
+</html>
+<script src="../src/normalizer.js"></script>
+<script>
+    //scrub the form.
+    function validateForm() {
+        var x = document.forms["myForm"]["test"].value;
+        var output = Normalizer.clean(x);
+        alert(output);
+        return false;
+    }
+</script>
