@@ -1,3 +1,4 @@
+/**/
 var Normalizer = {
     clean: function (str) {
         for (var i = 0; i < this.map.length; i++) {
